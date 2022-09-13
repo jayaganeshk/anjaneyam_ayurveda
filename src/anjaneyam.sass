@@ -1,0 +1,43 @@
+@import '~vuetify/src/styles/styles.sass'
+$body-font-family: "AlegreyaSansSC"
+
+@font-face
+    font-family: 'AlegreyaSansSC'
+    src: url('@/./assets/Alegreya_Sans_SC/AlegreyaSansSC-Regular.ttf') format('truetype')
+​
+@font-face
+    font-family: 'AlegreyaSansSC'
+    font-weight: 500
+    src: url('@/./assets/Alegreya_Sans_SC/AlegreyaSansSC-Medium.ttf') format('truetype')
+
+@font-face
+    font-family: 'AlegreyaSansSC'
+    font-weight: 700
+    src: url('@/./assets/Alegreya_Sans_SC/AlegreyaSansSC-Bold.ttf') format('truetype')
+
+@font-face
+    font-family: 'AlegreyaSansSC'
+    font-weight: 800
+    src: url('@/./assets/Alegreya_Sans_SC/AlegreyaSansSC-ExtraBold.ttf') format('truetype')
+
+@font-face
+    font-family: 'AlegreyaSansSC'
+    font-weight: 900
+    src: url('@/./assets/Alegreya_Sans_SC/AlegreyaSansSC-Black.ttf') format('truetype')
+// $typoOptions: display-4 display-3 display-2 display-1 headline--text title subtitle-1 subtitle-2 body-1 body-2 caption overline h1 h2 h3 h4 h5 h6 text-h1 text-h2 text-h3 text-h4 text-h5  text--h6 
+​
+// $heading-font-family: "Telefonica Sans Medium"
+%font-choice
+    font-family: $body-font-family, sans-serif !important
+​
+@mixin md-typography
+// @each $typoOption in $typoOptions
+//     .#{$typoOption}
+//         @extend %font-choice
+​
+.v-application
+    @extend %font-choice
+
+.v-application .text-h4
+    @extend %font-choice
+@include md-typography
