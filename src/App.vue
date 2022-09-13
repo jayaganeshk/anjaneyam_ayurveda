@@ -40,7 +40,9 @@
       <HomeCarousel />
       <WelcomeTo class="mt-4 mx-4" />
       <TreatmentsProvided class="mt-12 mx-4" />
-      <HistoryOf class="mt-12" />
+      <VisionOf class="mt-12" />
+      <OurDoctors class="mt-12 mx-4" />
+      <FooterComponent />
     </v-main>
   </v-app>
 </template>
@@ -49,7 +51,9 @@
 import HomeCarousel from "@/components/HomeCarousel.vue";
 import WelcomeTo from "@/components/Welcome.vue";
 import TreatmentsProvided from "@/components/HomePage/TreatmentsProvided.vue";
-import HistoryOf from "@/components/HomePage/HistoryOf.vue";
+import VisionOf from "@/components/HomePage/VisionOf.vue";
+import OurDoctors from "@/components/HomePage/OurDoctors.vue";
+import FooterComponent from "@/components/FooterComponent.vue";
 
 export default {
   name: "App",
@@ -57,7 +61,9 @@ export default {
     HomeCarousel,
     WelcomeTo,
     TreatmentsProvided,
-    HistoryOf,
+    VisionOf,
+    OurDoctors,
+    FooterComponent,
   },
 
   data() {

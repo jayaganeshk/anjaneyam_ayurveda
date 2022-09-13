@@ -16,7 +16,7 @@
           color="#FFF1D5"
           elevation="5"
           v-for="treatment in treatments"
-          :key="treatment"
+          :key="treatment.name"
           class="ma-4"
         >
           <v-img :src="treatment.image"></v-img>

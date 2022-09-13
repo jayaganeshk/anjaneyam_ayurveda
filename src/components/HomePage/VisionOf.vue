@@ -1,7 +1,20 @@
 <template>
   <div class="history text-center pa-4">
-    <div class="text-h4 font-weight-bold">History of Anjaneyam</div>
-    <div>
+    <v-row justify="center" align="center">
+      <v-img
+        src="@/assets/designs/vision-left.png"
+        contain
+        max-width="20"
+      ></v-img>
+      <div class="text-h4 font-weight-bold mx-2">Vision of Sri Anjaneyam</div>
+      <v-img
+        src="@/assets/designs/vision-right.png"
+        contain
+        max-width="20"
+      ></v-img>
+    </v-row>
+
+    <div class="ma-2">
       Sri Anjaneyam Ayurveda Vaidyasala, Kumbakonam is just a small
       reciprocation to my guru Dr. Sanal Chandran, BAMS who brought me into this
       beautiful world of Ayurveda. He always says the solution to todays erratic
@@ -9,12 +22,7 @@
       Bharat did not just contemplate a set of rules to follow. They gave us
       balance in physical and mental wellbeing. Adopting the local tradition,
       paramparaya dishes, dress codes and practices will simply lead us to
-      disease-free living. My Guru at Anjaneyam Ayurveda Hosptial, Payyanur,
-      Kerala not just treats patients but also gives them the knowledge of Yoga,
-      Kalari, our dharma and its Samskaras. He also practices traditional way of
-      agriculture, cattle farming, and medicine preparation. Just like our
-      Vaidyasala in kumbakonam, there are other branches at Andrapradesh and
-      Madhyapradesh where the same tradition is being followed.
+      disease-free living.
     </div>
     <div class="text-right">-Dr. M. Manogar, Cheif Doctor, BAMS</div>
   </div>
@@ -22,7 +30,7 @@
 
 <script>
 export default {
-  name: "HistoryOf",
+  name: "VisionOf",
 };
 </script>
 
