@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center">
+  <div class="text-center treatments">
     <div class="text-h4 font-weight-bold">
       Treatments Provided at Our Vaidyasala
     </div>
@@ -72,4 +72,11 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.treatments {
+  background-image: url("../../assets/designs/ourdoctors-1.png");
+  background-position: center;
+  background-repeat: repeat-x;
+  background-size: cover;
+}
+</style>

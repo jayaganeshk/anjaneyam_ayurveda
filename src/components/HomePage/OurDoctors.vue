@@ -1,34 +1,38 @@
 <template>
-  <v-container class="text-center">
-    <div class="text-h4 font-weight-bold mx-2">Our Doctors</div>
+  <div class="ourdoctors">
+    <v-container class="text-center">
+      <div class="text-h4 font-weight-bold mx-2">Our Doctors</div>
 
-    <v-row justify="center" class="mx-auto">
-      <v-card
-        max-width="250"
-        max-height="300"
-        v-for="doctor in doctors"
-        :key="doctor.name"
-        class="ma-4"
-      >
-        <v-img
-          :src="doctor.src"
-          class="white--text align-end"
-          max-height="250"
-          max-width="300"
-        >
-          <v-card height="100" outlined color="transparent">
-            <v-overlay absolute>
-              <v-card-title>
-                {{ doctor.name }} <br />
-                {{ doctor.qal }}
-              </v-card-title>
-              <v-card-subtitle> {{ doctor.des }} </v-card-subtitle>
-            </v-overlay>
+      <v-container style="width: 100%">
+        <v-row justify="center" align="center" class="ma-auto">
+          <v-card
+            max-width="250"
+            max-height="300"
+            v-for="doctor in doctors"
+            :key="doctor.name"
+            class="ma-4"
+          >
+            <v-img
+              :src="doctor.src"
+              class="white--text align-end"
+              max-height="250"
+              max-width="300"
+            >
+              <v-card height="100" outlined color="transparent">
+                <v-overlay absolute>
+                  <v-card-title>
+                    {{ doctor.name }} <br />
+                    {{ doctor.qal }}
+                  </v-card-title>
+                  <v-card-subtitle> {{ doctor.des }} </v-card-subtitle>
+                </v-overlay>
+              </v-card>
+            </v-img>
           </v-card>
-        </v-img>
-      </v-card>
-    </v-row>
-  </v-container>
+        </v-row>
+      </v-container>
+    </v-container>
+  </div>
 </template>
 
 <script>
@@ -85,4 +89,11 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.ourdoctors {
+  background-image: url("../../assets/designs/ourdoctors-1.png");
+  background-position: center;
+  background-repeat: repeat-x;
+  background-size: cover;
+}
+</style>

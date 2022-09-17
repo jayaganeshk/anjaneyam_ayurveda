@@ -7,24 +7,24 @@
         </v-app-bar-nav-icon>
         <v-spacer></v-spacer>
         <div class="ma-auto" justify-center>
-          <span v-for="tabTitle in tabTitles" :key="tabTitle">
+          <span v-for="tabTitle in tabTitles" :key="tabTitle.name">
             <v-btn
               rounded
               color="primary"
               class="ma-1"
-              v-if="tabTitle == selectedTab"
-              @click="navigateTo(tabTitle)"
+              v-if="tabTitle.route == selectedTab"
+              @click="navigateTo(tabTitle.name, tabTitle.route)"
             >
-              {{ tabTitle }}
+              {{ tabTitle.name }}
             </v-btn>
             <v-btn
               rounded
               text
               class="ma-1"
               v-else
-              @click="navigateTo(tabTitle)"
+              @click="navigateTo(tabTitle.name, tabTitle.route)"
             >
-              {{ tabTitle }}
+              {{ tabTitle.name }}
             </v-btn>
           </span>
         </div>
@@ -37,60 +37,61 @@
       </v-app-bar-nav-icon>
     </v-app-bar>
     <v-main>
-      <HomeCarousel />
-      <WelcomeTo class="mt-4 mx-4" />
-      <TreatmentsProvided class="mt-12 mx-4" />
-      <VisionOf class="mt-12" />
-      <OurDoctors class="mt-12 mx-4" />
+      <router-view />
       <FooterComponent />
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HomeCarousel from "@/components/HomeCarousel.vue";
-import WelcomeTo from "@/components/Welcome.vue";
-import TreatmentsProvided from "@/components/HomePage/TreatmentsProvided.vue";
-import VisionOf from "@/components/HomePage/VisionOf.vue";
-import OurDoctors from "@/components/HomePage/OurDoctors.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
-
 export default {
   name: "App",
-  components: {
-    HomeCarousel,
-    WelcomeTo,
-    TreatmentsProvided,
-    VisionOf,
-    OurDoctors,
-    FooterComponent,
-  },
+  components: { FooterComponent },
 
   data() {
     return {
       tabTitles: [
-        "Home",
-        "Ayurveda",
-        "Our Vaidyasala",
-        "Our Doctors",
-        "Treatments Provided",
-        "Contact us",
+        {
+          name: "Home",
+          route: "HomePage",
+        },
+        {
+          name: "Ayurveda",
+          route: "Ayurveda",
+        },
+        {
+          name: "Our Vaidyasala",
+          route: "OurVaidyasala",
+        },
+        { name: "Our Doctors", route: "OurDoctors" },
+        { name: "Treatments Provided", route: "TreatmentsProvided" },
+        { name: "Contact us", route: "ContactUs" },
       ],
       selectedTab: "Home",
-
       isDesktop: false,
     };
   },
   mounted() {
     this.onResize();
     window.addEventListener("resize", this.onResize, { passive: true });
+    this.updateNavColor();
   },
+
   methods: {
-    navigateTo(selection) {
+    navigateTo(selection, route) {
       this.selectedTab = selection;
+      this.$router.push({ name: route });
+      this.updateNavColor();
     },
     onResize() {
       this.isDesktop = window.innerWidth > 960;
+    },
+    updateNavColor() {
+      let currentRoute = this.$route.path;
+      console.log(currentRoute);
+      this.selectedTab = currentRoute.split("/")[1];
+      console.log(this.selectedTab);
     },
   },
 };
