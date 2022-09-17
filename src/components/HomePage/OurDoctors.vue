@@ -10,7 +10,12 @@
         :key="doctor.name"
         class="ma-4"
       >
-        <v-img :src="doctor.src" class="white--text align-end">
+        <v-img
+          :src="doctor.src"
+          class="white--text align-end"
+          max-height="250"
+          max-width="300"
+        >
           <v-card height="100" outlined color="transparent">
             <v-overlay absolute>
               <v-card-title>
@@ -42,7 +47,7 @@ export default {
           name: "Dr. JAYASRI MANOGAR",
           qal: "BHMS",
           des: "Homeopathy Doctor",
-          src: require("@/assets/doctors/Dr. T.PRASANTH.jpeg"),
+          src: require("@/assets/doctors/JayasriManogar.jpeg"),
         },
         {
           name: "Dr. R.KESHAV RAM",
@@ -54,7 +59,7 @@ export default {
           name: "Dr. R.ROOBINI",
           qal: "BAMS",
           des: "Skin Care",
-          src: require("@/assets/doctors/Dr. T.PRASANTH.jpeg"),
+          src: require("@/assets/doctors/Roobini.jpeg"),
         },
         {
           name: "Dr. T.PRASANTH",
@@ -66,7 +71,7 @@ export default {
           name: "Dr. V.RAHINI",
           qal: "BAMS",
           des: "Bhaishajya Kalpana",
-          src: require("@/assets/doctors/Dr. T.PRASANTH.jpeg"),
+          src: require("@/assets/doctors/Rahini.jpeg"),
         },
         {
           name: "Dr. K.MANISUNDAR",

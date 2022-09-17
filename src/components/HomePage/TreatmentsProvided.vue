@@ -7,19 +7,20 @@
       class="ma-1"
       src="@/assets/designs/treatments.png"
       contain
-      max-height="50"
-    ></v-img>
+      height="50"
+    >
+    </v-img>
     <div>
       <v-row align="center" justify="center" class="text-center">
         <v-card
-          max-width="350"
           color="#FFF1D5"
           elevation="5"
+          max-width="350"
           v-for="treatment in treatments"
           :key="treatment.name"
           class="ma-4"
         >
-          <v-img :src="treatment.image"></v-img>
+          <v-img :src="treatment.image" height="200"></v-img>
           <v-card-title>{{ treatment.name }} </v-card-title>
         </v-card>
       </v-row>
@@ -35,7 +36,7 @@ export default {
       treatments: [
         {
           name: "Panchakarma Therapy",
-          image: require("@/assets/treatments/Panchakarma Therapy.jpg"),
+          image: require("@/assets/treatments/panchakarma.jpeg"),
         },
         {
           name: "Ksharasutra Therapy",
@@ -43,7 +44,11 @@ export default {
         },
         {
           name: "Swarnaprasham",
-          image: require("@/assets/treatments/Panchakarma Therapy.jpg"),
+          image: require("@/assets/treatments/swarnaprasham.jpeg"),
+        },
+        {
+          name: "Naasyam",
+          image: require("@/assets/treatments/naasyam.jpeg"),
         },
         {
           name: "Akshi Tarpanam",
@@ -51,11 +56,15 @@ export default {
         },
         {
           name: "Leech Therapy",
-          image: require("@/assets/treatments/Panchakarma Therapy.jpg"),
+          image: require("@/assets/treatments/leech.jpeg"),
         },
         {
           name: "Yoga Therapy",
-          image: require("@/assets/treatments/Panchakarma Therapy.jpg"),
+          image: require("@/assets/treatments/yoga.jpeg"),
+        },
+        {
+          name: "Mind Balance",
+          image: require("@/assets/treatments/mindbalance.jpeg"),
         },
       ],
     };
