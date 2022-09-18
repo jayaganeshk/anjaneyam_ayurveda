@@ -12,50 +12,108 @@
     </div>
     <div class="white--text text-center">
       <v-row>
-        <v-col>
-          <div class="text-h5 ma-2">Internal Patients:</div>
+        <v-col cols="12" sm="4"> </v-col>
+        <v-col cols="12" sm="4">
           <div>
-            Sri Anjaneyam Ayurveda Vaidyasala, <br />
-            478/2, Govindakudi - Papanasam Road, Inaamkiliyur Village, <br />
-            Vlaiagaiman, Thiruvarur, Tamilnadu 614207
-          </div>
+            <div class="text-h5 ma-2 text-decoration-underline">
+              In Patients:
+            </div>
+            <div>
+              Sri Anjaneyam Ayurveda Vaidyasala, <br />
+              478/2, Govindakudi - Papanasam Road, Inaamkiliyur Village, <br />
+              Vlaiagaiman, Thiruvarur, Tamilnadu 614207
+            </div>
 
-          <div class="text-p white--text ma-2">
-            <v-icon color="white" size="medium"> mdi-phone </v-icon>
-            +91 9876543210
-          </div>
-        </v-col>
+            <div class="text-p ma-2">
+              <v-row justify="center" align="center">
+                <v-col>
+                  <v-icon color="white" size="medium"> mdi-phone </v-icon>
+                  <a
+                    href="tel:+919876543210"
+                    class="white--text text-decoration-none"
+                  >
+                    +91 9876543210
+                  </a>
+                </v-col>
+                <v-col>
+                  <v-icon color="white" size="medium"> mdi-whatsapp </v-icon>
+                  <a
+                    href="https://wa.me/919876543210"
+                    target="_blank"
+                    class="white--text text-decoration-none"
+                  >
+                    +91 9876543210
+                  </a>
+                </v-col>
+                <v-col>
+                  <v-icon color="white" size="medium">fa-envelope </v-icon>
+                  <a
+                    href="mailto:srianjaneyamayurveda@gmail.com"
+                    target="_blank"
+                    class="white--text text-decoration-none"
+                  >
+                    srianjaneyamayurveda@gmail.com
+                  </a>
+                </v-col>
+              </v-row>
+            </div>
 
-        <v-col>
-          <div class="text-h5 ma-2">Out Patients:</div>
-          <div>
-            Sri Anjaneyam Ayurveda Vaidyasala,<br />
-            65/33, Pachaiyappan Street, <br />
-            Kumbakonam, Tamilnadu 612001
-          </div>
-          <div class="text-p white--text ma-2">
-            <v-icon color="white" size="medium"> mdi-phone </v-icon>
-            +91 9994871336
+            <v-col cols="12" sm="4"> </v-col>
           </div>
         </v-col>
       </v-row>
-      <div class="text-center">
-        <v-row align="center" justify="center">
-          <div class="text-p white--text ma-2">
-            <v-icon color="white" size="medium" class="mx-2">
-              mdi-whatsapp
-            </v-icon>
-            +91 1234567890
+
+      <v-row>
+        <v-col cols="12" sm="4"> </v-col>
+        <v-col cols="12" sm="4">
+          <div>
+            <div class="text-h5 ma-2 text-decoration-underline">
+              Out Patients:
+            </div>
+            <div>
+              Sri Anjaneyam Ayurveda Vaidyasala,<br />
+              65/33, Pachaiyappan Street, <br />
+              Kumbakonam, Tamilnadu 612001
+            </div>
+
+            <div class="text-p white--text ma-2">
+              <v-row justify="center" align="center">
+                <v-col>
+                  <v-icon color="white" size="medium"> mdi-phone </v-icon>
+                  <a
+                    href="tel:+919994871336"
+                    class="white--text text-decoration-none"
+                  >
+                    +91 9994871336
+                  </a>
+                </v-col>
+                <v-col>
+                  <v-icon color="white" size="medium"> mdi-whatsapp </v-icon>
+                  <a
+                    href="https://wa.me/919994871336"
+                    target="_blank"
+                    class="white--text text-decoration-none"
+                  >
+                    +91 9994871336
+                  </a>
+                </v-col>
+                <v-col>
+                  <v-icon color="white" size="medium">fa-envelope </v-icon>
+                  <a
+                    href="mailto:srianjaneyamayurveda@gmail.com"
+                    target="_blank"
+                    class="white--text text-decoration-none"
+                  >
+                    srianjaneyamayurveda@gmail.com
+                  </a>
+                </v-col>
+              </v-row>
+            </div>
+
+            <v-col cols="12" sm="4"> </v-col>
           </div>
-          <div class="text-p white--text ma-2">
-            <v-icon color="white" size="medium" class="mx-2">
-              fa-envelope
-            </v-icon>
-            contactus@srianjaneyamayurveda.in
-          </div>
-        </v-row>
-        <div class="mt-8"></div>
-      </div>
+        </v-col>
+      </v-row>
     </div>
   </v-container>
 </template>

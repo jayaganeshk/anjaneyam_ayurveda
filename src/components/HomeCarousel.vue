@@ -17,7 +17,13 @@
           {{ item.text }}
         </div>
 
-        <v-btn outlined rounded color="secondary" class="ma-4">
+        <v-btn
+          outlined
+          rounded
+          color="secondary"
+          class="ma-4"
+          @click="navigate(item.route)"
+        >
           {{ item.button }}
         </v-btn>
       </v-overlay>
@@ -35,16 +41,19 @@ export default {
           src: require("@/assets/images/carousel-0.jpeg"),
           text: "Sri Anjaneyam Ayurveda Vaidyasala",
           button: "About Us",
+          route: "OurVaidyasala",
         },
         {
           src: require("@/assets/images/carousel-1.jpeg"),
           text: "Sri Anjaneyam Ayurveda Vaidyasala",
           button: "Treatments",
+          route: "TreatmentsProvided",
         },
         {
           src: require("@/assets/images/carousel-2.jpeg"),
           text: "Sri Anjaneyam Ayurveda Vaidyasala",
           button: "Book your appoitment",
+          route: "ContactUs",
         },
       ],
     };
@@ -52,6 +61,11 @@ export default {
   computed: {
     isMobile() {
       return this.$vuetify.breakpoint.xs;
+    },
+  },
+  methods: {
+    navigate(route) {
+      this.$router.push({ name: route });
     },
   },
 };

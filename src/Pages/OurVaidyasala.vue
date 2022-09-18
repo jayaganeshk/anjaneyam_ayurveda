@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="ourdoctor">
     <div>
       <v-img src="@/assets/OurVaidyasala.png"> </v-img>
     </div>
@@ -31,4 +31,11 @@ export default {
 };
 </script>
 
-<style></style>
+<!-- <style>
+.ourdoctor {
+  background-image: url("../assets/designs/ourdoctors-1.png");
+  background-position: center;
+  background-repeat: repeat-x;
+  background-size: cover;
+}
+</style> -->

@@ -1,17 +1,17 @@
 <template>
   <div class="history text-center pa-4">
     <v-row justify="center" align="center">
-      <v-img
+      <!-- <v-img
         src="@/assets/designs/vision-left.png"
         contain
         max-width="20"
-      ></v-img>
+      ></v-img> -->
       <div class="text-h4 font-weight-bold mx-2">Vision of Sri Anjaneyam</div>
-      <v-img
+      <!-- <v-img
         src="@/assets/designs/vision-right.png"
         contain
         max-width="20"
-      ></v-img>
+      ></v-img> -->
     </v-row>
 
     <div class="ma-2">

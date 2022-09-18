@@ -8,6 +8,9 @@ import OurDoctors from "@/components/HomePage/OurDoctors.vue";
 import TreatmentsProvided from "@/components/HomePage/TreatmentsProvided.vue";
 import OurVaidyasala from "@/Pages/OurVaidyasala.vue";
 import Ayurveda from "@/Pages/Ayurveda.vue";
+import OurDoctor from "@/Pages/OurDoctor.vue";
+import ContactUs from "@/Pages/ContactUs.vue";
+
 const routes = [
   {
     path: "/",
@@ -39,6 +42,16 @@ const routes = [
     path: "/Ayurveda",
     name: "Ayurveda",
     component: Ayurveda,
+  },
+  {
+    path: "/OurDoctor/:id",
+    name: "OurDoctor",
+    component: OurDoctor,
+  },
+  {
+    path: "/ContactUs",
+    name: "ContactUs",
+    component: ContactUs,
   },
 ];
 

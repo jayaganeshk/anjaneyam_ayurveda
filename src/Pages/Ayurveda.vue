@@ -95,7 +95,7 @@ export default {
 
 <style>
 .ayurveda {
-  background-image: url("../assets/designs/ayurveda.png");
+  background-image: url("../assets/designs/ourdoctors-1.png");
   background-position: center;
   background-repeat: repeat-x;
   background-size: cover;

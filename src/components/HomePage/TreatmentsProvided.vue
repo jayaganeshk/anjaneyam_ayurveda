@@ -39,24 +39,24 @@ export default {
           image: require("@/assets/treatments/panchakarma.jpeg"),
         },
         {
-          name: "Ksharasutra Therapy",
-          image: require("@/assets/treatments/Panchakarma Therapy.jpg"),
+          name: "Nasyam",
+          image: require("@/assets/treatments/naasyam.jpeg"),
+        },
+        {
+          name: "Akshi Tarpanam",
+          image: require("@/assets/treatments/akshi.jpeg"),
         },
         {
           name: "Swarnaprasham",
           image: require("@/assets/treatments/swarnaprasham.jpeg"),
         },
         {
-          name: "Naasyam",
-          image: require("@/assets/treatments/naasyam.jpeg"),
-        },
-        {
-          name: "Akshi Tarpanam",
-          image: require("@/assets/treatments/Panchakarma Therapy.jpg"),
-        },
-        {
-          name: "Leech Therapy",
+          name: "Jalaukavacharanam",
           image: require("@/assets/treatments/leech.jpeg"),
+        },
+        {
+          name: "Ksharasutra Therapy",
+          image: require("@/assets/treatments/Panchakarma Therapy.jpg"),
         },
         {
           name: "Yoga Therapy",
