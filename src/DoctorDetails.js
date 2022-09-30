@@ -94,7 +94,7 @@ const Doctors = [
         time: "In Patient -10:00AM-1:00PM",
       },
       {
-        loc: "ARR Ayurveda Vaidyashala Kumbakonam",
+        loc: "ARR Ayurveda Vaidyasala Kumbakonam",
         time: "Out Patient - 5:00PM-8:00PM",
       },
     ],

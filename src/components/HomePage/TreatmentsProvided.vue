@@ -64,7 +64,7 @@ export default {
           id: "Panchakarma",
           name: "Panchakarma Therapy",
           image: require("@/assets/treatments/panchakarma.jpeg"),
-          text: "Keraliya Panchakarma procedure like abhyangam (oil massage), kizhi (formentation), virechanam (purgation), vasti (enema) etc. provided by qualified male and female therapists",
+          text: "Keraliya Panchakarma procedure like abhyangam (oil massage), kizhi (fomentation), virechanam (purgation), vasti (enema) etc. provided by qualified male and female therapists",
         },
         {
           id: "Nasyam",

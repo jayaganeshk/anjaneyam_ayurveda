@@ -1,7 +1,7 @@
 <template>
   <div class="ayurveda">
     <div class="ma-4 text-center">
-      <div class="text-h4 font-weight-bold ma-4">Ayurveda Avatharanam</div>
+      <div class="text-h4 font-weight-bold ma-4">Ayurveda Avataranam</div>
       <div class="text-center mx-16">
         Ayurveda is not an experimental ideolgy created by a group of
         researchers. It is a complete science contemplated by our rishis for a

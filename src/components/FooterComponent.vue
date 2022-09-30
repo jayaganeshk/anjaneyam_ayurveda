@@ -32,7 +32,7 @@
                     href="tel:+919876543210"
                     class="white--text text-decoration-none"
                   >
-                    +91 9876543210
+                    +91 82731234567
                   </a>
                 </v-col>
                 <v-col>
@@ -42,7 +42,7 @@
                     target="_blank"
                     class="white--text text-decoration-none"
                   >
-                    +91 9876543210
+                    +91 82731234567
                   </a>
                 </v-col>
                 <v-col>
