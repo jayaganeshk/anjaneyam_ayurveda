@@ -93,7 +93,7 @@ export default {
         {
           id: "Ksharasutra",
           name: "Ksharasutra Therapy",
-          image: require("@/assets/treatments/Panchakarma Therapy.jpg"),
+          image: require("@/assets/treatments/ksharasutra.jpeg"),
           text: "Special Ayurveda treatment for conditions like fistula-in-ano, abscess, piles etc",
         },
         {

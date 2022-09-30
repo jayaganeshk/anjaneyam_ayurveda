@@ -42,8 +42,8 @@
         ></v-img>
       </v-app-bar-title>
       <v-spacer> </v-spacer>
+      <v-icon class="ma-2" color="white"> mdi-menu</v-icon>
     </v-app-bar>
-
     <v-main>
       <router-view />
       <FooterComponent />

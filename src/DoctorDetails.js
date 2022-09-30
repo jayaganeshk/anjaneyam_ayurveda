@@ -50,7 +50,7 @@ const Doctors = [
     name: "Dr. R.KESHAV RAM",
     qal: "BAMS",
     des: "Diabetes Management",
-    src: require("@/assets/doctors/Dr. T.PRASANTH.jpeg"),
+    src: require("@/assets/doctors/keshav.jpeg"),
     text: [
       "Dynamic young Ayurveda practitioner with a distinctive approach towards the patient and the disease",
       "He is an alumnus of Sri Jayendra Saraswati Ayurveda College and Hospital. He has been practicing in Anjaneyam for the past 3 years. ",
@@ -110,7 +110,7 @@ const Doctors = [
     name: "Dr. T.PRASANTH",
     qal: "BAMS",
     des: "Varma Chikitsa",
-    src: require("@/assets/doctors/Dr. T.PRASANTH.jpeg"),
+    src: require("@/assets/doctors/Dr. T.PRASANTH.jpg"),
     text: [
       "Lively and impulsive young Ayurveda practitioner",
       "He is also an alumnus of Sri Jayendra Saraswati Ayurveda College and Hospital",
@@ -133,7 +133,7 @@ const Doctors = [
     name: "Dr. K.MANISUNDAR",
     qal: "BNYS",
     des: "Yoga and Diet",
-    src: require("@/assets/doctors/Dr. T.PRASANTH.jpeg"),
+    src: require("@/assets/doctors/manisundar.jpeg"),
     text: [
       "Compassionate young Naturopathy and Yoga practitioner",
       "He is an alumnus of Sri Ramakrishna Naturopathy College, Nagercoil.",
