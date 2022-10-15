@@ -32,7 +32,7 @@
                     href="tel:+918273123457"
                     class="white--text text-decoration-none"
                   >
-                    +91 8273123457
+                    +918273123457
                   </a>
                 </v-col>
                 <v-col>
@@ -42,7 +42,7 @@
                     target="_blank"
                     class="white--text text-decoration-none"
                   >
-                    +91 8273123457
+                    +918273123457
                   </a>
                 </v-col>
                 <v-col>
@@ -83,7 +83,7 @@
                     href="tel:+919994857336"
                     class="white--text text-decoration-none"
                   >
-                    +91 9994857336
+                    +919994857336
                   </a>
                 </v-col>
                 <v-col>
@@ -93,7 +93,7 @@
                     target="_blank"
                     class="white--text text-decoration-none"
                   >
-                    +91 9994857336
+                    +919994857336
                   </a>
                 </v-col>
                 <v-col>
@@ -117,7 +117,7 @@
         <v-col cols="12" sm="4"> </v-col>
         <v-col cols="12" sm="4">
           <div>
-            Designed and Developeed by
+            Designed and Developed by
             <a
               href="https://www.deonte.in"
               target="_blank"
