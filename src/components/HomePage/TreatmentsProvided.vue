@@ -70,7 +70,7 @@ export default {
           id: "Nasyam",
           name: "Nasyam",
           image: require("@/assets/treatments/naasyam.jpeg"),
-          text: "",
+          text: "Instilling medicine through the nostrils in sufficient doses for various diseases related to the head and shoulder.",
         },
         {
           id: "Akshi",
@@ -106,7 +106,7 @@ export default {
           id: "Mind",
           name: "Mind Balance",
           image: require("@/assets/treatments/mindbalance.jpeg"),
-          text: "",
+          text: "Diseases arise in the body but the suffering happens in the mind. Ayurveda speaks about how to handle both planes in order to heal the system.",
         },
       ],
     };

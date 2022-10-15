@@ -8,16 +8,52 @@
           <v-img src="@/assets/logo.png" contain max-height="200px"> </v-img>
         </v-col>
         <v-col cols="12" sm="6">
-          <v-form class="mx-16 text-center">
+          <v-form class="mx-16 text-center" ref="form" v-model="valid">
             <div v-for="field in fields" :key="field">
               <v-text-field
                 outlined
                 v-model="data[field]"
                 :label="field"
                 required
+                :rules="[rules.required]"
               ></v-text-field>
             </div>
-            <v-btn rounded color="secondary primary--text">
+            <v-text-field
+              outlined
+              v-model="data['Mail']"
+              label="Mail"
+              required
+              :rules="[rules.required, rules.email]"
+            ></v-text-field>
+            <v-textarea
+              outlined
+              v-model="data['Message']"
+              label="Message"
+              required
+              :rules="[rules.required]"
+            ></v-textarea>
+            <vue-recaptcha
+              class="text-center"
+              sitekey="6LdOtacaAAAAAJKVPOLZ26FNjLfxa6zVU2xQwoGF"
+              @verify="verifyMethod"
+            >
+            </vue-recaptcha>
+            <v-btn
+              rounded
+              color="secondary primary--text"
+              v-if="loading"
+              class="mt-2"
+            >
+              please wait..
+            </v-btn>
+            <v-btn
+              v-else
+              rounded
+              color="secondary primary--text"
+              :disabled="isDisabled"
+              @click="submit"
+              class="mt-2"
+            >
               Send your message
             </v-btn>
           </v-form>
@@ -35,17 +71,103 @@
         ></iframe>
       </div>
     </div>
+
+    <v-snackbar
+      v-model="snackbar"
+      :multi-line="multiLine"
+      timeout="5000"
+      color="white"
+      top
+    >
+      <span class="font-weight-bold primary--text">
+        {{ snackBarText }}
+      </span>
+      <template v-slot:action="{ attrs }">
+        <v-btn
+          color="primary"
+          class="font-weight-bold"
+          text
+          v-bind="attrs"
+          @click="snackbar = false"
+        >
+          Close
+        </v-btn>
+      </template>
+    </v-snackbar>
   </div>
 </template>
 
 <script>
+import { VueRecaptcha } from "vue-recaptcha";
+import axios from "axios";
+
 export default {
   name: "ContactUs",
+  components: { VueRecaptcha },
   data() {
     return {
+      valid: false,
       data: {},
-      fields: ["Name", "Phone", "Mail", "Message"],
+      fields: ["Name", "Phone"],
+      captcha: "",
+      rules: {
+        required: (value) => !!value || "Required.",
+        min: (v) => v.length >= 8 || "Min 8 characters",
+        email: (v) => /.+@.+\..+/.test(v) || "E-mail must be valid",
+      },
+      snackBarText: "Thank you for reaching us. we will get back to you soon",
+      multiLine: true,
+      snackbar: false,
+      loading: false,
     };
+  },
+  methods: {
+    verifyMethod(response) {
+      this.captcha = response;
+    },
+    submit() {
+      this.$refs.form.validate();
+      if (this.valid) {
+        this.loading = true;
+        // console.log("data: ", this.data);
+        let data = this.data;
+        data["token"] = this.captcha;
+
+        // axios POST request
+        const options = {
+          url: "https://rb36omzifbuabm3pioriqf735m0uejsi.lambda-url.ap-south-1.on.aws/",
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json;charset=UTF-8",
+          },
+          data,
+        };
+
+        axios(options).then((response) => {
+          console.log("response.status: ", response.status);
+          if (response.status == 200) {
+            this.snackbar = true;
+            this.snackBarText =
+              "Thank you for reaching us. we will get back to you soon";
+            this.loading = false;
+          } else {
+            this.snackbar = false;
+            this.snackBarText = "There was some error. Please try again later.";
+            this.loading = false;
+          }
+        });
+      }
+    },
+  },
+  computed: {
+    isDisabled: function () {
+      if (this.captcha.length > 0) {
+        return false;
+      } else {
+        return true;
+      }
+    },
   },
 };
 </script>

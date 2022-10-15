@@ -29,20 +29,20 @@
                 <v-col>
                   <v-icon color="white" size="medium"> mdi-phone </v-icon>
                   <a
-                    href="tel:+919876543210"
+                    href="tel:+918273123457"
                     class="white--text text-decoration-none"
                   >
-                    +91 82731234567
+                    +91 8273123457
                   </a>
                 </v-col>
                 <v-col>
                   <v-icon color="white" size="medium"> mdi-whatsapp </v-icon>
                   <a
-                    href="https://wa.me/919876543210"
+                    href="https://wa.me/918273123457"
                     target="_blank"
                     class="white--text text-decoration-none"
                   >
-                    +91 82731234567
+                    +91 8273123457
                   </a>
                 </v-col>
                 <v-col>
@@ -62,7 +62,6 @@
           </div>
         </v-col>
       </v-row>
-
       <v-row>
         <v-col cols="12" sm="4"> </v-col>
         <v-col cols="12" sm="4">
@@ -81,20 +80,20 @@
                 <v-col>
                   <v-icon color="white" size="medium"> mdi-phone </v-icon>
                   <a
-                    href="tel:+919994871336"
+                    href="tel:+919994857336"
                     class="white--text text-decoration-none"
                   >
-                    +91 9994871336
+                    +91 9994857336
                   </a>
                 </v-col>
                 <v-col>
                   <v-icon color="white" size="medium"> mdi-whatsapp </v-icon>
                   <a
-                    href="https://wa.me/919994871336"
+                    href="https://wa.me/919994857336"
                     target="_blank"
                     class="white--text text-decoration-none"
                   >
-                    +91 9994871336
+                    +91 9994857336
                   </a>
                 </v-col>
                 <v-col>
