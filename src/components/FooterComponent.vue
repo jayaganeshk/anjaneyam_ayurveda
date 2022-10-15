@@ -113,6 +113,20 @@
           </div>
         </v-col>
       </v-row>
+      <v-row>
+        <v-col cols="12" sm="4"> </v-col>
+        <v-col cols="12" sm="4">
+          <div>
+            Designed and Developeed by
+            <a
+              href="https://www.deonte.in"
+              target="_blank"
+              class="secondary--text"
+              >www.deonte.in</a
+            >
+          </div>
+        </v-col>
+      </v-row>
     </div>
   </v-container>
 </template>
