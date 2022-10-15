@@ -12,8 +12,8 @@ const allowedorigin = [
   "https://srianjaneyamayurveda.in",
 ];
 
-const SES_FROM_MAIL = "jayaganesh111999@gmail.com";
-const SES_TO_MAIL = ["jayaganesh111999@gmail.com"];
+const SES_FROM_MAIL = "websitenotifications@srianjaneyamayurveda.in";
+const SES_TO_MAIL = ["srianjaneyamayurveda@gmail.com"];
 
 exports.handler = async (event, context, callback) => {
   let body;
@@ -42,20 +42,31 @@ exports.handler = async (event, context, callback) => {
       response: captcha,
     });
 
-    console.log(verifyResult);
     if (verifyResult.status === 200) {
       // sendResponse(callback, 200, "authenticated");
-      let { Mail, Message, Name, Phone } = body;
+      let { Mail, Message, Name, Phone, department, doctor } = body;
       let MESSAGE = `
-      Hello,
+      <strong>Hello</strong>, <br/>
       ${Name} is trying to reach you <br />
       ${Name}'s Message: <br />
       ${Message}.
       <br />
       you can revert back to the user at
       ${Phone}, ${Mail} <br />
+      <br/>
+      This is an auto generated mail. dont reply
+      <br />
+
+
       `;
-      let subject = `${Name} is trying to reach you`;
+
+      let subject = `${Name} is trying to reach you `;
+
+      if (department) subject += ` | Department: ${department}`;
+      if (doctor) subject += ` | Doctor:  ${doctor}`;
+
+      console.log("MESSAGE: ", MESSAGE);
+      console.log("subject: ", subject);
 
       let response = await sesSendMail(subject, MESSAGE);
       console.log("response: ", response);

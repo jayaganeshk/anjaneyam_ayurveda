@@ -25,6 +25,20 @@
               required
               :rules="[rules.required, rules.email]"
             ></v-text-field>
+            <v-select
+              :items="departments"
+              label="Department"
+              outlined
+              v-model="data['department']"
+            >
+            </v-select>
+            <v-select
+              :items="doctors"
+              label="Doctor"
+              outlined
+              v-model="data['doctor']"
+            >
+            </v-select>
             <v-textarea
               outlined
               v-model="data['Message']"
@@ -119,6 +133,23 @@ export default {
       multiLine: true,
       snackbar: false,
       loading: false,
+      departments: [
+        "Ayurveda ",
+        "Yoga",
+        "Varma ",
+        "Homeopathy",
+        "Diet",
+        "other",
+      ],
+      doctors: [
+        "Dr. M. Manogar",
+        "Dr. Jayasri Manogar",
+        "Dr. R. Roobini",
+        "Dr. R. Keshav Ram",
+        "Dr. T. Prasanth",
+        "Dr. K. Manisundar ",
+        "Dr. V. Rahini",
+      ],
     };
   },
   methods: {
@@ -144,19 +175,33 @@ export default {
           data,
         };
 
-        axios(options).then((response) => {
-          console.log("response.status: ", response.status);
-          if (response.status == 200) {
-            this.snackbar = true;
-            this.snackBarText =
-              "Thank you for reaching us. we will get back to you soon";
-            this.loading = false;
-          } else {
-            this.snackbar = false;
-            this.snackBarText = "There was some error. Please try again later.";
-            this.loading = false;
-          }
-        });
+        try {
+          axios(options)
+            .then((response) => {
+              console.log("response.status: ", response.status);
+              if (response.status == 200) {
+                this.snackbar = true;
+                this.snackBarText =
+                  "Thank you for reaching us. we will get back to you soon";
+                this.loading = false;
+              } else {
+                this.snackbar = true;
+                this.snackBarText =
+                  "There was some error. Please try again later.";
+                this.loading = false;
+              }
+            })
+            .catch(() => {
+              this.snackbar = true;
+              this.snackBarText =
+                "There was some error. Please try again later.";
+              this.loading = false;
+            });
+        } catch (error) {
+          this.snackbar = false;
+          this.snackBarText = "There was some error. Please try again later.";
+          this.loading = false;
+        }
       }
     },
   },
