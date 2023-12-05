@@ -47,10 +47,10 @@ exports.handler = async (event, context, callback) => {
       let { Mail, Message, Name, Phone, department, doctor } = body;
       let MESSAGE = `
       <strong>Hello</strong>, <br/>
-      ${Name} is trying to reach you <br />
+      ${Name} is trying to reach you <br /> <br />
       ${Name}'s Message: <br />
       ${Message}.
-      <br />
+      <br /> <br />
       you can revert back to the user at
       ${Phone}, ${Mail} <br />
       <br/>
